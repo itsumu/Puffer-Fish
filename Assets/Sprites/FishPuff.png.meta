@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 58667add96cfc4e13b1060c5683a0ebe
-timeCreated: 1516859839
+guid: deb10d8190a3b479695372803fa6add6
+timeCreated: 1516859887
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: FishIdle_0
-    21300002: FishIdle_1
-    21300004: FishIdle_2
-    21300006: FishIdle_3
+    21300000: FishPuff_0
+    21300002: FishPuff_1
+    21300004: FishPuff_2
+    21300006: FishPuff_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -94,7 +94,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FishIdle_0
+      name: FishPuff_0
       rect:
         serializedVersion: 2
         x: 0
@@ -108,7 +108,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: FishIdle_1
+      name: FishPuff_1
       rect:
         serializedVersion: 2
         x: 38
@@ -122,24 +122,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: FishIdle_2
+      name: FishPuff_2
       rect:
         serializedVersion: 2
         x: 76
-        y: 0
-        width: 38
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: FishIdle_3
-      rect:
-        serializedVersion: 2
-        x: 114
         y: 0
         width: 38
         height: 36
