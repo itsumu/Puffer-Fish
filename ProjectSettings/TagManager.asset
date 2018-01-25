@@ -41,14 +41,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 194773005
+  - name: Background
+    uniqueID: 3963367413
     locked: 0
   - name: Water
     uniqueID: 4095334963
     locked: 0
-  - name: Background
-    uniqueID: 3963367413
+  - name: Player
+    uniqueID: 194773005
     locked: 0
   - name: Barrier
     uniqueID: 1573161051
