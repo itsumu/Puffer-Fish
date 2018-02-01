@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BackgroundScroll : MonoBehaviour {
-	public Transform viewport;
+	public Transform viewportTransform;
 	private BoxCollider2D backgroundCollider;
 	private float backgroundLength;
 
@@ -15,7 +15,7 @@ public class BackgroundScroll : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (viewport.position.x - transform.position.x > backgroundLength) { // Background out of view, scroll it
+		if (viewportTransform.position.x - transform.position.x > backgroundLength) { // Background out of view, scroll it
 			RepositionBackground();
 		}
 	}

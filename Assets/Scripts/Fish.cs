@@ -7,17 +7,17 @@ public class Fish : MonoBehaviour {
 	const int fishPuffing2 = 2;
 	const int fishPuffing3 = 3;
 
+	Rigidbody2D fishBody;
 	Animator fishAnimator;
 	public int fishState = 0;
-	public int speed = 5;
+	public int shiftSpeed = 20;
 	public int jumpForce = 4000;
 
 	// Use this for initialization
 	void Start () {
 		// Move forward right
-		Rigidbody2D fishBody;
 		fishBody = GetComponent<Rigidbody2D>();
-		fishBody.velocity = Vector2.right * speed;
+		fishBody.velocity = Vector2.right * shiftSpeed;
 
 		// Set fish's animation
 		fishAnimator = GetComponent<Animator>();
@@ -26,7 +26,8 @@ public class Fish : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Space)) {
-			GetComponent<Rigidbody2D> ().AddForce (Vector2.up * jumpForce);
+			fishBody.velocity = new Vector2 (shiftSpeed, 0);
+			fishBody.AddForce (Vector2.up * jumpForce);
 			if (fishState == fishIdling) {
 				fishAnimator.Play ("FishPuff1");
 				fishState = fishPuffing1;
