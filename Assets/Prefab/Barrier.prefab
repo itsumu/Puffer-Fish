@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4581667481224652}
   - component: {fileID: 212282759595488824}
   - component: {fileID: 61988660509554464}
-  - component: {fileID: 114965165727633712}
+  - component: {fileID: 114814857555477698}
   m_Layer: 8
   m_Name: Barrier
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1984933320613364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 214, y: -60, z: 0}
+  m_LocalPosition: {x: 214, y: -68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -67,7 +67,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 25, y: 95}
   m_EdgeRadius: 0
---- !u!114 &114965165727633712
+--- !u!114 &114814857555477698
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -75,11 +75,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1984933320613364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b75afcf1fa9ba42c7aff7f26e10cadf7, type: 3}
+  m_Script: {fileID: 11500000, guid: fad8e6ea11e6b4d7082e426d8bbf3795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewPortTransform: {fileID: 0}
-  backgroundCollider: {fileID: 0}
 --- !u!212 &212282759595488824
 SpriteRenderer:
   m_ObjectHideFlags: 1

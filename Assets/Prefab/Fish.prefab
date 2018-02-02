@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1882492839213852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -55, z: 0}
+  m_LocalPosition: {x: 0, y: -50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -107,9 +107,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7150b06c16834666bde8c067bd6bd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishState: 0
-  shiftSpeed: 20
-  jumpForce: 4000
+  actionState: 0
+  shiftSpeed: 50
+  jumpForce: 6000
+  swimmingAltitude: 0
 --- !u!212 &212727295637627864
 SpriteRenderer:
   m_ObjectHideFlags: 1
