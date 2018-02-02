@@ -7,6 +7,10 @@ public class CameraFollow : MonoBehaviour {
 
 	// Update is called once per frame
 	void LateUpdate () {
+		if (GameController.instance.gameOver) { // Stop tracing when game is over
+			this.enabled = false;
+			return;
+		}
 		transform.position = new Vector3 (focusTarget.position.x,
 			transform.position.y,
 			transform.position.z);
