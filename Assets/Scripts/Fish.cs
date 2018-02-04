@@ -36,7 +36,7 @@ public class Fish : MonoBehaviour {
 			// Fish enter water
 			ForceIdling ();
 		}
-		if (Input.GetKeyDown (KeyCode.Space)) { // Key pressed
+		if (Input.anyKeyDown) { // Key pressed
 			TriggerStateChange ();
 		}
 	}

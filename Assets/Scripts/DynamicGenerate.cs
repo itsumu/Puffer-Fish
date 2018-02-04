@@ -12,6 +12,7 @@ public class DynamicGenerate : MonoBehaviour {
 
 	public GameObject bubblePrefab;
 	public GameObject barrierPrefab;
+	public Camera mainCamera;
 	Vector3 bubbleOffset;
 	Vector3 barrierOffset;
 	float lastPosXOfBarrier;
@@ -21,6 +22,7 @@ public class DynamicGenerate : MonoBehaviour {
 	// Create a bubble object
 	void CreateBubble() {
 		Vector3 currentPosition = transform.position;
+		currentPosition.z = bubblePrefab.transform.position.z; // Take prefab's z axis
 		float randomOffset = Random.Range (0, 50);
 		if (lastHeightOfBubble == -1) { // Bubble never exists
 			lastHeightOfBubble = minHeightOfBubble;
@@ -41,9 +43,11 @@ public class DynamicGenerate : MonoBehaviour {
 	// Create a barrier object
 	void CreateBarrier() {
 		Vector3 currentPosition = transform.position;
+		currentPosition.z = barrierPrefab.transform.position.z; // Take prefab's z axis
 		Vector3 extraOffset = new Vector3 (1, 0) * Random.Range (50, 100);
 		Instantiate (barrierPrefab, currentPosition + barrierOffset + extraOffset, Quaternion.identity);
-		if (transform.position.x - lastPosXOfBubble >= bubblesMinGap) {
+		if (transform.position.x - lastPosXOfBubble >= bubblesMinGap) { 
+			// Create an extra bubble to make barrier available to jump over
 			CreateBubble ();
 		}
 		lastPosXOfBarrier = transform.position.x;
@@ -52,10 +56,11 @@ public class DynamicGenerate : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Random.InitState (100);
-		bubbleOffset = bubblePrefab.transform.position;
-		barrierOffset = barrierPrefab.transform.position;
-		lastPosXOfBarrier = transform.position.x;
-		lastPosXOfBubble = transform.position.x;
+		mainCamera = FindObjectOfType<Camera> ();
+		bubbleOffset = new Vector3 (mainCamera.pixelWidth / 2, bubblePrefab.transform.position.y);
+		barrierOffset = new Vector3(mainCamera.pixelWidth / 2, barrierPrefab.transform.position.y);
+		lastPosXOfBarrier = -1000;
+		lastPosXOfBubble = -1000;
 		lastHeightOfBubble = -1;
 //		InvokeRepeating ("CreateBubble", 1, 1.5f);
 //		InvokeRepeating ("CreateBarrier", 1, 2);
