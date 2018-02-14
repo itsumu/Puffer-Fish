@@ -17,7 +17,6 @@ public class Fish : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		this.rigidBody = GetComponent<Rigidbody2D>();
-		this.rigidBody.gravityScale = 0; // Keep fish swimming horizontally
 		this.rigidBody.velocity = Vector2.right * shiftSpeed; // Move forward right
 		this.animator = GetComponent<Animator>(); // Set fish's animation
 		this.swimmingAltitude = this.transform.position.y; // Fish's swimming altitude
@@ -30,11 +29,6 @@ public class Fish : MonoBehaviour {
 			this.animator.enabled = false;
 			this.enabled = false; // Stop Update()
 			return;
-		}
-
-		if (this.actionState != fishIdling && this.transform.position.y <= this.swimmingAltitude) { 
-			// Fish enter water
-			ForceIdling ();
 		}
 		if (Input.anyKeyDown) { // Key pressed
 			TriggerStateChange ();
@@ -59,8 +53,6 @@ public class Fish : MonoBehaviour {
 
 	// Force the fish to idle when it enter the water
 	void ForceIdling() {
-		this.rigidBody.velocity = new Vector2(shiftSpeed, 0); // Stop dropping
-		this.rigidBody.gravityScale = 0;
 		this.animator.Play ("FishIdle");
 		this.actionState = fishIdling;
 	}
@@ -77,10 +69,12 @@ public class Fish : MonoBehaviour {
 		}
 	}
 
-	// Check collision between fish & barrier
-	void OnCollisionStay2D(Collision2D barrier) {
+	// Check collision between fish & barrier / ground
+	void OnCollisionEnter2D(Collision2D barrier) {
 		if (barrier.gameObject.tag == "Barrier") {
 			GameController.instance.FishDone ();
+		} else if (barrier.gameObject.tag == "Ground") {
+			ForceIdling ();
 		}
 	}
 }

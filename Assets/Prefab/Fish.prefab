@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4426331150230886}
   - component: {fileID: 212727295637627864}
   - component: {fileID: 50794713575586148}
-  - component: {fileID: 58659356181520648}
   - component: {fileID: 114719174871697610}
   - component: {fileID: 95878284624990204}
+  - component: {fileID: 61616797319215424}
   m_Layer: 8
   m_Name: Fish
   m_TagString: Player
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1882492839213852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -50, z: 0}
+  m_LocalPosition: {x: 0, y: -45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,8 +64,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58659356181520648
-CircleCollider2D:
+--- !u!61 &61616797319215424
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -77,8 +77,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 38, y: 36}
+    newSize: {x: 38, y: 36}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 19
+  m_Size: {x: 38, y: 36}
+  m_EdgeRadius: 0
 --- !u!95 &95878284624990204
 Animator:
   serializedVersion: 3
@@ -109,7 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionState: 0
   shiftSpeed: 50
-  jumpForce: 6000
+  jumpForce: 7500
   swimmingAltitude: 0
 --- !u!212 &212727295637627864
 SpriteRenderer:

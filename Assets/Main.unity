@@ -430,6 +430,82 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &453186244
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4483848513117584, guid: 942a9143370e840b3a349b86e1fddd88, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483848513117584, guid: 942a9143370e840b3a349b86e1fddd88, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -119
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483848513117584, guid: 942a9143370e840b3a349b86e1fddd88, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483848513117584, guid: 942a9143370e840b3a349b86e1fddd88, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483848513117584, guid: 942a9143370e840b3a349b86e1fddd88, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483848513117584, guid: 942a9143370e840b3a349b86e1fddd88, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483848513117584, guid: 942a9143370e840b3a349b86e1fddd88, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483848513117584, guid: 942a9143370e840b3a349b86e1fddd88, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114801668540177912, guid: 942a9143370e840b3a349b86e1fddd88,
+        type: 2}
+      propertyPath: viewportTransform
+      value: 
+      objectReference: {fileID: 236933912}
+    - target: {fileID: 61953937631142032, guid: 942a9143370e840b3a349b86e1fddd88,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 114801668540177912, guid: 942a9143370e840b3a349b86e1fddd88,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1634641361333428, guid: 942a9143370e840b3a349b86e1fddd88, type: 2}
+      propertyPath: m_Name
+      value: Water (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1634641361333428, guid: 942a9143370e840b3a349b86e1fddd88, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 212007472158032136, guid: 942a9143370e840b3a349b86e1fddd88,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1573161051
+      objectReference: {fileID: 0}
+    - target: {fileID: 212007472158032136, guid: 942a9143370e840b3a349b86e1fddd88,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114801668540177912, guid: 942a9143370e840b3a349b86e1fddd88, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 942a9143370e840b3a349b86e1fddd88, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &811299920
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,21 +977,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4426331150230886, guid: 78e99c9dd1c3d42cd966933c7a53549a, type: 2}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114719174871697610, guid: 78e99c9dd1c3d42cd966933c7a53549a,
-        type: 2}
-      propertyPath: jumpForce
-      value: 7500
-      objectReference: {fileID: 0}
-    - target: {fileID: 58659356181520648, guid: 78e99c9dd1c3d42cd966933c7a53549a,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50794713575586148, guid: 78e99c9dd1c3d42cd966933c7a53549a,
-        type: 2}
-      propertyPath: m_Simulated
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
