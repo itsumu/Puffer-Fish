@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DynamicGenerate : MonoBehaviour {
 	const float barriersGap = 150;
-	const float bubblesGap = 40;
-	const float bubblesMinGap = 20;
+	const float bubblesGap = 50;
+	const float bubblesMinGap = 40;
 	const float bubblesHeightInterval = 25f;
 	const float maxHeightOfBubble = 25;
 	const float minHeightOfBubble = 0;
@@ -62,8 +62,6 @@ public class DynamicGenerate : MonoBehaviour {
 		lastPosXOfBarrier = -1000;
 		lastPosXOfBubble = -1000;
 		lastHeightOfBubble = -1;
-//		InvokeRepeating ("CreateBubble", 1, 1.5f);
-//		InvokeRepeating ("CreateBarrier", 1, 2);
 	}
 	
 	// Update is called once per frame
