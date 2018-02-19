@@ -3,21 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DynamicGenerate : MonoBehaviour {
-	const float barriersGap = 150;
+	const float barriersGap = 200;
 	const float bubblesGap = 50;
-	const float bubblesMinGap = 40;
+	const float bubblesMinGap = 50;
+	const float cloudsGap = 150;
+	const float greyCloudsGap = 200;
 	const float bubblesHeightInterval = 25f;
 	const float maxHeightOfBubble = 25;
 	const float minHeightOfBubble = 0;
 
 	public GameObject bubblePrefab;
 	public GameObject barrierPrefab;
+	public GameObject cloudPrefab;
+	public GameObject greyCloudPrefab;
 	public Camera mainCamera;
 	Vector3 bubbleOffset;
 	Vector3 barrierOffset;
+	Vector3 cloudOffset;
+	Vector3 greyCloudOffset;
 	float lastPosXOfBarrier;
 	float lastPosXOfBubble;
 	float lastHeightOfBubble;
+	float lastPosXOfCloud;
+	float lastPosXOfGreyCloud;
 
 	// Create a bubble object
 	void CreateBubble() {
@@ -53,24 +61,58 @@ public class DynamicGenerate : MonoBehaviour {
 		lastPosXOfBarrier = transform.position.x;
 	}
 
+	// Create a cloud & make it move
+	void CreateCloud() {
+		Vector3 currentPosition = transform.position;
+		currentPosition.z = cloudPrefab.transform.position.z; // Take prefab's z axis
+		Vector3 extraOffset = new Vector3 (1, 0) * Random.Range (0, 50) +
+		                      new Vector3 (0, 1) * Random.Range (-10, 10);
+		Instantiate (cloudPrefab, currentPosition + cloudOffset + extraOffset, Quaternion.identity); // New cloud generation
+		lastPosXOfCloud = transform.position.x;
+	}
+
+	// Create a grey cloud & make it move
+	void CreateGreyCloud() {
+		Vector3 currentPosition = transform.position;
+		currentPosition.z = greyCloudPrefab.transform.position.z; // Take prefab's z axis
+		Vector3 extraOffset = new Vector3 (1, 0) * Random.Range (0, 50) + 
+							  new Vector3(0, 1) * Random.Range(-10, 10);
+		Instantiate (greyCloudPrefab, currentPosition + greyCloudOffset + extraOffset, Quaternion.identity); // New grey cloud generation
+		lastPosXOfGreyCloud = transform.position.x;
+	}
+
 	// Use this for initialization
 	void Start () {
 		Random.InitState (100);
 		mainCamera = FindObjectOfType<Camera> ();
 		bubbleOffset = new Vector3 (mainCamera.pixelWidth / 2, bubblePrefab.transform.position.y);
 		barrierOffset = new Vector3(mainCamera.pixelWidth / 2, barrierPrefab.transform.position.y);
+		cloudOffset = new Vector3 (mainCamera.pixelWidth / 2, cloudPrefab.transform.position.y);
+		greyCloudOffset = new Vector3 (mainCamera.pixelWidth / 2, greyCloudPrefab.transform.position.y);
 		lastPosXOfBarrier = -1000;
 		lastPosXOfBubble = -1000;
+		lastPosXOfCloud = -1000;
+		lastPosXOfGreyCloud = -1000;
 		lastHeightOfBubble = -1;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		// Barrier generation
 		if (transform.position.x - lastPosXOfBarrier >= barriersGap) {
 			CreateBarrier ();
 		}
+		// Bubble generation
 		if (transform.position.x - lastPosXOfBubble >= bubblesGap) {
 			CreateBubble ();
+		}
+		// Cloud generation
+		if (transform.position.x - lastPosXOfCloud >= cloudsGap) {
+			CreateCloud ();
+		}
+		// Grey cloud generation
+		if (transform.position.x - lastPosXOfGreyCloud >= greyCloudsGap) {
+			CreateGreyCloud ();
 		}
 	}
 }

@@ -47,6 +47,15 @@ TagManager:
   - name: Background
     uniqueID: 3963367413
     locked: 0
+  - name: Sun
+    uniqueID: 4178578795
+    locked: 0
+  - name: GreyCloud
+    uniqueID: 572662235
+    locked: 0
+  - name: Cloud
+    uniqueID: 1054751437
+    locked: 0
   - name: Water
     uniqueID: 4095334963
     locked: 0

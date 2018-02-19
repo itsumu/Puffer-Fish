@@ -10,7 +10,7 @@ public class Fish : MonoBehaviour {
 	Rigidbody2D rigidBody;
 	Animator animator;
 	public int actionState = 0;
-	public int shiftSpeed = 50;
+	public int shiftSpeed;
 	public int jumpForce = 5000;
 	public float swimmingAltitude;
 
@@ -70,10 +70,10 @@ public class Fish : MonoBehaviour {
 	}
 
 	// Check collision between fish & barrier / ground
-	void OnCollisionEnter2D(Collision2D barrier) {
-		if (barrier.gameObject.tag == "Barrier") {
+	void OnCollisionEnter2D(Collision2D blockingObject) {
+		if (blockingObject.gameObject.tag == "Barrier") {
 			GameController.instance.FishDone ();
-		} else if (barrier.gameObject.tag == "Ground") {
+		} else if (blockingObject.gameObject.tag == "Ground") {
 			ForceIdling ();
 		}
 	}
