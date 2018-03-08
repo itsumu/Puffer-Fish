@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50794713575586148}
   - component: {fileID: 114719174871697610}
   - component: {fileID: 95878284624990204}
-  - component: {fileID: 61616797319215424}
+  - component: {fileID: 60826194899998028}
   m_Layer: 8
   m_Name: Fish
   m_TagString: Player
@@ -64,15 +64,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61616797319215424
-BoxCollider2D:
+--- !u!60 &60826194899998028
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1882492839213852}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: defe72602e5c947dcae4fc72d31b15bc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -86,9 +86,16 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 38, y: 36}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 4, y: 16}
+      - {x: -19, y: 8}
+      - {x: -19, y: -10}
+      - {x: -8, y: -10}
+      - {x: 8, y: -10}
+      - {x: 19, y: -6}
+      - {x: 19, y: 10}
+      - {x: 13, y: 16}
 --- !u!95 &95878284624990204
 Animator:
   serializedVersion: 3
@@ -153,7 +160,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 194773005
-  m_SortingLayer: 3
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300006, guid: 58667add96cfc4e13b1060c5683a0ebe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -500,12 +500,12 @@ Prefab:
     - target: {fileID: 212007472158032136, guid: 942a9143370e840b3a349b86e1fddd88,
         type: 2}
       propertyPath: m_SortingLayerID
-      value: 1573161051
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 212007472158032136, guid: 942a9143370e840b3a349b86e1fddd88,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1634641361333428, guid: 942a9143370e840b3a349b86e1fddd88, type: 2}
       propertyPath: m_TagString
@@ -589,19 +589,19 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: d951bd8d7d0f34288befc097ba1c812e, type: 3}
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 110
+    m_MaxSize: 167
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 0'
+  m_Text: Score:0
 --- !u!222 &811299924
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -739,8 +739,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_Font: {fileID: 12800000, guid: d951bd8d7d0f34288befc097ba1c812e, type: 3}
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -829,8 +829,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 22
+    m_Font: {fileID: 12800000, guid: d951bd8d7d0f34288befc097ba1c812e, type: 3}
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -858,8 +858,8 @@ GameObject:
   m_PrefabParentObject: {fileID: 1882492839213852, guid: 78e99c9dd1c3d42cd966933c7a53549a,
     type: 2}
   m_PrefabInternal: {fileID: 2055467395}
---- !u!58 &1448021506
-CircleCollider2D:
+--- !u!60 &1448021501
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -871,8 +871,24 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 19
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 38, y: 36}
+    newSize: {x: 38, y: 36}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 4, y: 16}
+      - {x: -19, y: 8}
+      - {x: -19, y: -5}
+      - {x: 15, y: -5}
+      - {x: 19, y: -2}
+      - {x: 19, y: 10}
+      - {x: 13, y: 16}
 --- !u!1 &1691214941
 GameObject:
   m_ObjectHideFlags: 0

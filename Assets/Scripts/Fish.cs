@@ -40,7 +40,6 @@ public class Fish : MonoBehaviour {
 		if (actionState == fishIdling) {
 			this.animator.Play ("FishPuff1");
 			this.actionState = fishPuffing1;
-			this.rigidBody.gravityScale = 1; // Fish can feel gravity now ~
 			this.rigidBody.AddForce (Vector2.up * jumpForce); // Take a jump
 		} else if (actionState == fishPuffing1) {
 			this.animator.Play ("FishPuff2");
