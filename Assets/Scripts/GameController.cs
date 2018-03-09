@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour {
 	public void FishDone() {
 		gameOverLabel.SetActive (true);
 		gameOver = true;
+		Time.timeScale = 0;
 	}
 
 	void RestartGame() {

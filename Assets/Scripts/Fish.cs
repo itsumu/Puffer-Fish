@@ -24,12 +24,6 @@ public class Fish : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameController.instance.gameOver) { // Game over, fish stop moving
-			this.rigidBody.velocity = Vector2.zero;
-			this.animator.enabled = false;
-			this.enabled = false; // Stop Update()
-			return;
-		}
 		if (Input.anyKeyDown) { // Key pressed
 			TriggerStateChange ();
 		}
