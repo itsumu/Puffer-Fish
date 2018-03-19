@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114719174871697610}
   - component: {fileID: 95878284624990204}
   - component: {fileID: 60826194899998028}
+  - component: {fileID: 82209281664594938}
   m_Layer: 8
   m_Name: Fish
   m_TagString: Player
@@ -89,13 +90,93 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 4, y: 16}
-      - {x: -19, y: 8}
+      - {x: -19, y: 12}
       - {x: -19, y: -10}
       - {x: -8, y: -10}
       - {x: 8, y: -10}
       - {x: 19, y: -6}
       - {x: 19, y: 10}
       - {x: 13, y: 16}
+--- !u!82 &82209281664594938
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1882492839213852}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d0b1e00cdccea4e72b448454733975c6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95878284624990204
 Animator:
   serializedVersion: 3
@@ -128,6 +209,8 @@ MonoBehaviour:
   shiftSpeed: 50
   jumpForce: 7500
   swimmingAltitude: 0
+  airJumpSound: {fileID: 8300000, guid: d0b1e00cdccea4e72b448454733975c6, type: 3}
+  bulbJumpSound: {fileID: 8300000, guid: 38b8339a425684cb0beaad2594f4fb00, type: 3}
 --- !u!212 &212727295637627864
 SpriteRenderer:
   m_ObjectHideFlags: 1

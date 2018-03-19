@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
+	int score = 0;
+
 	public static GameController instance;
 	public GameObject gameOverLabel;
 	public Text scoreText;
 	public bool gameOver = false;
-	int score = 0;
+	public AudioClip gameOverSound;
+	private AudioSource audioSource;
 
 	// Use this for initialization
 	void Awake () {
@@ -18,6 +21,7 @@ public class GameController : MonoBehaviour {
 			Destroy (this.gameObject);
 			return;
 		}
+		this.audioSource = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -35,6 +39,7 @@ public class GameController : MonoBehaviour {
 	public void FishDone() {
 		gameOverLabel.SetActive (true);
 		gameOver = true;
+		this.audioSource.PlayOneShot (gameOverSound);
 		Time.timeScale = 0;
 	}
 
