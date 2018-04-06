@@ -46,5 +46,6 @@ public class GameController : MonoBehaviour {
 	void RestartGame() {
 		UnityEngine.SceneManagement.SceneManager.LoadScene (
 			UnityEngine.SceneManagement.SceneManager.GetActiveScene ().name);
+		Time.timeScale = 1;
 	}
 }
